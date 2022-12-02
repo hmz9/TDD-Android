@@ -3,10 +3,9 @@ package io.github.hmz9.tdd_mvvm
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import com.google.gson.JsonSyntaxException
+import io.github.hmz9.tdd_mvvm.models.Quote
 import org.junit.Assert.*
 
-import org.junit.After
-import org.junit.Before
 import org.junit.Test
 import java.io.FileNotFoundException
 
@@ -41,9 +40,9 @@ class QuoteManagerTest {
 
         val quoteManager = QuoteManager()
         quoteManager.populateQuotes(arrayOf(
-            Quote("First Quote", "1"),
-            Quote("Second Quote", "2"),
-            Quote("Third Quote", "3")
+            Quote(0,"First Quote", "1"),
+            Quote(1, "Second Quote", "2"),
+            Quote(2, "Third Quote", "3")
         ))
 
         val quote = quoteManager.getPreviousQuote()
@@ -56,9 +55,9 @@ class QuoteManagerTest {
 
         val quoteManager = QuoteManager()
         quoteManager.populateQuotes(arrayOf(
-            Quote("First Quote", "1"),
-            Quote("Second Quote", "2"),
-            Quote("Third Quote", "3")
+            Quote(0,"First Quote", "1"),
+            Quote(1, "Second Quote", "2"),
+            Quote(2, "Third Quote", "3")
         ))
 
         quoteManager.currentQuoteIndex = 2

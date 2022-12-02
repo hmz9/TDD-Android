@@ -2,6 +2,7 @@ package io.github.hmz9.tdd_mvvm
 
 import android.content.Context
 import com.google.gson.Gson
+import io.github.hmz9.tdd_mvvm.models.Quote
 
 class QuoteManager {
 
@@ -23,7 +24,7 @@ class QuoteManager {
         quoteList = quotes
     }
 
-    fun getCurrentQuote(): Quote{
+    fun getCurrentQuote(): Quote {
         return quoteList[currentQuoteIndex]
     }
 
